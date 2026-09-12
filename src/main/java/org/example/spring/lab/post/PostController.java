@@ -6,7 +6,6 @@ import org.example.spring.lab.post.model.Post;
 import org.example.spring.lab.post.model.PostDto;
 import org.springframework.web.bind.annotation.*;
 
-@CrossOrigin(origins = "http://localhost:5173")
 @RestController
 @RequestMapping("/api/post")
 @RequiredArgsConstructor
