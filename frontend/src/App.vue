@@ -5,9 +5,12 @@ import axios from 'axios'
 const title = ref('')
 const contents = ref('')
 
+const API_URL = import.meta.env.VITE_BACKEND_URL;
+console.log('API_URL:', API_URL);
+
 const createPost = async () => {
   try {
-    const response = await axios.post('http://localhost:8080/api/post/new', {
+    const response = await axios.post(`${API_URL}/api/post/new`, {
       title: title.value,
       contents: contents.value,
     })
