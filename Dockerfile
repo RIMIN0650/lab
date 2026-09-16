@@ -10,6 +10,8 @@
 #RUN gradle bootjar --no-daemon
 
 FROM openjdk:17-ea-17-slim
-COPY ./build/libs/*.jar /app.jar
+ARG JAR_FILE
+#COPY ./build/libs/*.jar /app.jar
+COPY ${JAR_FILE} /app.jar
 EXPOSE 8080
 CMD ["java", "-jar", "/app.jar"]
